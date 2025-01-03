@@ -8,7 +8,7 @@ import (
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		htmlFilePath := "script/index.html" 
+		htmlFilePath := "index.html" 
 		htmlContent, err := os.ReadFile(htmlFilePath)
 		if err != nil {
 			http.Error(w, "Error loading HTML file", http.StatusInternalServerError)
